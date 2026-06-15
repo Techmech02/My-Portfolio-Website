@@ -1,0 +1,84 @@
+{
+  "siteTitle": "TechGod | Developer Portfolio",
+  "tagline": "Building things that actually matter.",
+  "bio": "6th semester CSE student at MITRC, Alwar — shipping AI/ML products, full-stack apps, and open-source tools. I don't wait for the degree. Pursuing a serious GenAI Engineer path: RAG systems, agentic workflows, vector databases, and LLM API development.",
+  "contactEmail": "techgod@email.com",
+  "location": "Alwar, Rajasthan, India",
+  "github": "https://github.com/techgod",
+  "linkedin": "https://linkedin.com/in/techgod",
+  "stats": {
+    "yearsBuilding": 3,
+    "projectsShipped": 6,
+    "liveProducts": 2,
+    "semestersStudied": 6
+  },
+  "skills": [
+    { "name": "Python / AI/ML", "level": 78 },
+    { "name": "FastAPI / Backend", "level": 75 },
+    { "name": "Java / Full-Stack", "level": 70 },
+    { "name": "Docker / DevOps", "level": 65 },
+    { "name": "LLMs / RAG / Agents", "level": 68 },
+    { "name": "React / Frontend", "level": 60 }
+  ],
+  "projects": [
+    {
+      "title": "GhostAudit",
+      "summary": "B2B SaaS tool that detects and visualizes cloud cost leaks in ML infrastructure. Scans AWS for idle resources, orphaned storage, and wasteful compute.",
+      "role": "Solo Builder · Backend + Product",
+      "tech": ["FastAPI", "AWS", "Airflow", "Docker", "Python"],
+      "images": ["assets/ghost-audit-thumb.svg"]
+    },
+    {
+      "title": "TruthLens",
+      "summary": "Detects sycophancy in AI chatbots. Chrome extension with three-layer proxy architecture that intercepts API traffic and scores responses for over-agreeableness.",
+      "role": "Solo Builder · Full-Stack + ML",
+      "tech": ["Chrome Extension", "FastAPI", "Ollama", "LLM", "Python"],
+      "images": ["assets/truthlens-thumb.svg"]
+    },
+    {
+      "title": "LSTM System Optimizer",
+      "summary": "Predicts CPU and memory usage patterns using LSTM neural networks, enabling proactive resource allocation before bottlenecks occur.",
+      "role": "ML Engineer · Academic Project",
+      "tech": ["Python", "LSTM", "TensorFlow", "NumPy", "Matplotlib"],
+      "images": ["assets/lstm-thumb.svg"]
+    },
+    {
+      "title": "GST Notice Explainer",
+      "summary": "LLM-powered wrapper that explains GST notices to Indian SMBs in plain Hindi/English and suggests next steps. Revenue-first wrapper product.",
+      "role": "Founder · Full-Stack + LLM",
+      "tech": ["Python", "FastAPI", "LLM API", "PDF parsing", "React"]
+    },
+    {
+      "title": "ElectroAI",
+      "summary": "Hyper-narrow AI assistant for Indian electricians — accessible via WhatsApp, trained on Indian electrical codes. 18-month build.",
+      "role": "Founder · Research + Design",
+      "tech": ["LLM fine-tuning", "WhatsApp API", "Python", "Hindi NLP"]
+    },
+    {
+      "title": "AlgoViz",
+      "summary": "Interactive visualizer for 8 sorting algorithms. Used by classmates for exam prep.",
+      "role": "Solo Builder · Educational Tool",
+      "tech": ["JavaScript", "HTML5 Canvas", "CSS Animations"]
+    }
+  ],
+  "blog": [
+    {
+      "title": "Why I built a sycophancy detector (and what it found)",
+      "tag": "AI/ML",
+      "readTime": "5 min",
+      "excerpt": "AI assistants are trained to please. I got tired of not knowing when they were doing it, so I built TruthLens to score every response."
+    },
+    {
+      "title": "The three AI skills nobody talks about but everyone needs",
+      "tag": "Career",
+      "readTime": "4 min",
+      "excerpt": "LLM security, AI evals, and inference optimization — the underrated skills that separate junior AI devs from the ones who get hired."
+    },
+    {
+      "title": "How I went from DSA exam prep to shipping a B2B SaaS product",
+      "tag": "Product",
+      "readTime": "6 min",
+      "excerpt": "Building GhostAudit alongside semester exams taught me more about product thinking than any textbook. Here's the honest story."
+    }
+  ]
+}

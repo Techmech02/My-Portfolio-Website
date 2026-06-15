@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechGod — CSE Student, AI/ML & Full-Stack Developer. Building real products from Alwar, India." />
+  <meta property="og:title" content="TechGod — Developer Portfolio" />
+  <meta property="og:description" content="AI/ML & Full-Stack Developer. Building real products." />
+  <title>TechGod | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner container">
+      <a href="#" class="nav-logo" aria-label="Home">TG<span class="accent">.</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#blog">Notes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="content.json" download="TechGod_CV.json" class="btn btn-ghost btn-sm" aria-label="Download CV">Download CV</a>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#blog">Notes</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="content.json" download>Download CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home" aria-label="Hero section">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-shape" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="g1" cx="70%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#6C63FF" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#0A0A0F" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="g2" cx="20%" cy="80%" r="50%">
+              <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.12"/>
+              <stop offset="100%" stop-color="#0A0A0F" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="900" height="700" fill="#0A0A0F"/>
+          <ellipse cx="650" cy="280" rx="420" ry="380" fill="url(#g1)"/>
+          <ellipse cx="150" cy="580" rx="300" ry="260" fill="url(#g2)"/>
+          <circle cx="700" cy="120" r="2" fill="#6C63FF" opacity="0.6"/>
+          <circle cx="820" cy="250" r="1.5" fill="#6C63FF" opacity="0.4"/>
+          <circle cx="760" cy="380" r="1" fill="#fff" opacity="0.3"/>
+          <circle cx="680" cy="480" r="2.5" fill="#00D4FF" opacity="0.3"/>
+          <circle cx="150" cy="200" r="1.5" fill="#fff" opacity="0.2"/>
+          <circle cx="80" cy="400" r="1" fill="#6C63FF" opacity="0.3"/>
+          <line x1="600" y1="100" x2="800" y2="180" stroke="#6C63FF" stroke-width="0.5" opacity="0.2"/>
+          <line x1="750" y1="200" x2="860" y2="320" stroke="#6C63FF" stroke-width="0.5" opacity="0.15"/>
+        </svg>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <div class="hero-eyebrow">
+            <span class="dot-live" aria-hidden="true"></span>
+            Available for opportunities
+          </div>
+          <h1 class="hero-heading">
+            Building things<br/>that actually<br/><span class="accent typewriter" id="typewriter"></span>
+          </h1>
+          <p class="hero-tagline">CSE student at MITRC, Alwar — shipping AI/ML products, full-stack apps, and open-source tools. I don't wait for the degree.</p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">View Work</a>
+            <a href="mailto:techgod@email.com" class="btn btn-ghost">Download CV</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num">6+</span>
+              <span class="stat-label">Projects shipped</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Semesters building</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Ambition</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-avatar-wrap" aria-hidden="true">
+          <div class="avatar-glow"></div>
+          <div class="avatar-ring">
+            <svg class="avatar-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="circle-clip">
+                  <circle cx="160" cy="160" r="148"/>
+                </clipPath>
+                <linearGradient id="av-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1A1A2E"/>
+                  <stop offset="100%" stop-color="#16213E"/>
+                </linearGradient>
+              </defs>
+              <circle cx="160" cy="160" r="148" fill="url(#av-bg)" stroke="#6C63FF" stroke-width="1.5" opacity="0.6"/>
+              <!-- Stylized developer avatar -->
+              <g clip-path="url(#circle-clip)">
+                <!-- Body/shirt -->
+                <rect x="80" y="210" width="160" height="120" rx="20" fill="#6C63FF" opacity="0.9"/>
+                <!-- Neck -->
+                <rect x="140" y="185" width="40" height="35" rx="8" fill="#C9A882"/>
+                <!-- Head -->
+                <ellipse cx="160" cy="155" rx="58" ry="62" fill="#C9A882"/>
+                <!-- Hair -->
+                <ellipse cx="160" cy="100" rx="58" ry="38" fill="#1A1A1A"/>
+                <rect x="102" y="100" width="16" height="35" rx="8" fill="#1A1A1A"/>
+                <rect x="182" y="100" width="16" height="35" rx="8" fill="#1A1A1A"/>
+                <!-- Eyes -->
+                <ellipse cx="140" cy="155" rx="10" ry="11" fill="#fff"/>
+                <ellipse cx="180" cy="155" rx="10" ry="11" fill="#fff"/>
+                <circle cx="143" cy="157" r="6" fill="#1A1A1A"/>
+                <circle cx="183" cy="157" r="6" fill="#1A1A1A"/>
+                <circle cx="145" cy="155" r="2" fill="#fff"/>
+                <circle cx="185" cy="155" r="2" fill="#fff"/>
+                <!-- Nose -->
+                <ellipse cx="160" cy="170" rx="5" ry="4" fill="#B8906A"/>
+                <!-- Mouth -->
+                <path d="M148 182 Q160 192 172 182" stroke="#7A5C3C" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <!-- Laptop on shirt -->
+                <rect x="105" y="235" width="110" height="70" rx="6" fill="#0A0A0F" opacity="0.8"/>
+                <rect x="110" y="240" width="100" height="58" rx="4" fill="#1A1A2E"/>
+                <!-- Code lines on laptop screen -->
+                <rect x="118" y="248" width="40" height="3" rx="1.5" fill="#6C63FF" opacity="0.8"/>
+                <rect x="118" y="255" width="60" height="3" rx="1.5" fill="#00D4FF" opacity="0.6"/>
+                <rect x="118" y="262" width="30" height="3" rx="1.5" fill="#6C63FF" opacity="0.5"/>
+                <rect x="118" y="269" width="50" height="3" rx="1.5" fill="#fff" opacity="0.3"/>
+                <rect x="118" y="276" width="45" height="3" rx="1.5" fill="#00D4FF" opacity="0.4"/>
+              </g>
+            </svg>
+          </div>
+          <div class="avatar-badge">
+            <span class="mono">CSE · 6th Sem</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-label="About section">
+      <div class="container">
+        <div class="section-label">
+          <span class="mono accent">01</span> About
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <h2 class="section-heading">I build things.<br/>The rest follows.</h2>
+            <p>6th semester CSE student at MITRC, Alwar — but my real education happens when I'm debugging a FastAPI backend at 2am or shipping a Chrome extension that solves a problem nobody else noticed yet.</p>
+            <p>I'm pursuing a GenAI Engineer path with serious intent: RAG systems, agentic workflows, vector databases, and LLM API development. I don't collect certificates; I build proof.</p>
+            <p>Long game: enough financial freedom to travel the world, eventually open an orphanage, and build things that expand access for people who don't usually get it.</p>
+            <div class="quick-stats">
+              <div class="qstat">
+                <span class="qstat-num">3+</span>
+                <span class="qstat-desc">Years coding</span>
+              </div>
+              <div class="qstat">
+                <span class="qstat-num">6+</span>
+                <span class="qstat-desc">Projects shipped</span>
+              </div>
+              <div class="qstat">
+                <span class="qstat-num">2</span>
+                <span class="qstat-desc">Live products</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-skills">
+            <h3 class="skills-heading">Core skills</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-meta">
+                  <span>Python / AI/ML</span><span class="skill-pct">78%</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill" style="--pct:78%" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Python / AI/ML 78%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta">
+                  <span>FastAPI / Backend</span><span class="skill-pct">75%</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill" style="--pct:75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="FastAPI / Backend 75%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta">
+                  <span>Java / Full-Stack</span><span class="skill-pct">70%</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill" style="--pct:70%" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Java / Full-Stack 70%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta">
+                  <span>Docker / DevOps</span><span class="skill-pct">65%</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill" style="--pct:65%" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Docker / DevOps 65%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta">
+                  <span>LLMs / RAG / Agents</span><span class="skill-pct">68%</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill" style="--pct:68%" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="LLMs / RAG / Agents 68%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-meta">
+                  <span>React / Frontend</span><span class="skill-pct">60%</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill" style="--pct:60%" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="React / Frontend 60%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section" id="projects" aria-label="Projects section">
+      <div class="container">
+        <div class="section-label">
+          <span class="mono accent">02</span> Work
+        </div>
+        <h2 class="section-heading">Projects that ship</h2>
+        <div class="projects-featured">
+
+          <article class="project-card featured" tabindex="0" aria-label="GhostAudit project">
+            <div class="project-thumb" style="background: linear-gradient(135deg, #0D0D1A 0%, #1A0D2E 50%, #0D1A1A 100%);" aria-hidden="true">
+              <svg viewBox="0 0 560 316" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0">
+                <rect width="560" height="316" fill="transparent"/>
+                <rect x="30" y="40" width="180" height="120" rx="8" fill="#1A1A2E" stroke="#6C63FF" stroke-width="1" opacity="0.7"/>
+                <text x="48" y="65" font-family="JetBrains Mono" font-size="9" fill="#6C63FF">$ ghost-audit scan</text>
+                <text x="48" y="82" font-family="JetBrains Mono" font-size="8" fill="#00D4FF">→ Scanning AWS...</text>
+                <text x="48" y="96" font-family="JetBrains Mono" font-size="8" fill="#ff6b6b">⚠ Idle EC2: $340/mo</text>
+                <text x="48" y="110" font-family="JetBrains Mono" font-size="8" fill="#ff6b6b">⚠ Orphan EBS: $89/mo</text>
+                <text x="48" y="124" font-family="JetBrains Mono" font-size="8" fill="#4ade80">✓ Savings: $429/mo</text>
+                <rect x="240" y="20" width="140" height="80" rx="6" fill="#6C63FF" opacity="0.15" stroke="#6C63FF" stroke-width="0.5"/>
+                <text x="310" y="55" text-anchor="middle" font-family="Inter" font-size="22" font-weight="700" fill="#6C63FF">$429</text>
+                <text x="310" y="72" text-anchor="middle" font-family="Inter" font-size="9" fill="#F0F0FF" opacity="0.7">saved/month</text>
+                <circle cx="430" cy="80" r="50" fill="none" stroke="#6C63FF" stroke-width="2" opacity="0.3"/>
+                <circle cx="430" cy="80" r="50" fill="none" stroke="#6C63FF" stroke-width="4" stroke-dasharray="220" stroke-dashoffset="55" opacity="0.7"/>
+                <text x="430" y="76" text-anchor="middle" font-family="Inter" font-size="14" font-weight="700" fill="#fff">75%</text>
+                <text x="430" y="91" text-anchor="middle" font-family="Inter" font-size="8" fill="#F0F0FF" opacity="0.6">waste detected</text>
+                <rect x="30" y="200" width="500" height="1" fill="#6C63FF" opacity="0.1"/>
+                <text x="30" y="240" font-family="Space Grotesk" font-size="18" font-weight="700" fill="#F0F0FF">GhostAudit</text>
+                <text x="30" y="258" font-family="Inter" font-size="10" fill="#F0F0FF" opacity="0.5">AI Cloud Cost Leak Detector</text>
+              </svg>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">FastAPI</span>
+                <span class="tag">AWS</span>
+                <span class="tag">Airflow</span>
+                <span class="tag">Docker</span>
+                <span class="tag">B2B SaaS</span>
+              </div>
+              <h3 class="project-title">GhostAudit</h3>
+              <p class="project-summary">B2B SaaS tool that detects and visualizes cloud cost leaks in ML infrastructure. Scans AWS for idle resources, orphaned storage, and wasteful compute — then reports savings in real time.</p>
+              <div class="project-meta">
+                <span class="project-role">Solo Builder · Backend + Product</span>
+              </div>
+              <a href="#" class="btn btn-outline" aria-label="View GhostAudit case study">Case Study →</a>
+            </div>
+          </article>
+
+          <article class="project-card featured" tabindex="0" aria-label="TruthLens project">
+            <div class="project-thumb" style="background: linear-gradient(135deg, #0A1A0D 0%, #0D1A2E 50%, #1A0A0D 100%);" aria-hidden="true">
+              <svg viewBox="0 0 560 316" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0">
+                <rect width="560" height="316" fill="transparent"/>
+                <!-- Browser chrome -->
+                <rect x="20" y="30" width="300" height="180" rx="8" fill="#1A1A2E" stroke="#2A2A4A" stroke-width="1"/>
+                <rect x="20" y="30" width="300" height="28" rx="8" fill="#0A0A0F"/>
+                <rect x="20" y="46" width="300" height="12" fill="#0A0A0F"/>
+                <circle cx="38" cy="44" r="5" fill="#ff5f57"/>
+                <circle cx="54" cy="44" r="5" fill="#febc2e"/>
+                <circle cx="70" cy="44" r="5" fill="#28c840"/>
+                <rect x="90" y="36" width="200" height="16" rx="8" fill="#1A1A2E"/>
+                <!-- Extension popup -->
+                <rect x="240" y="60" width="140" height="160" rx="6" fill="#0A0A0F" stroke="#6C63FF" stroke-width="1"/>
+                <text x="310" y="82" text-anchor="middle" font-family="Space Grotesk" font-size="10" font-weight="700" fill="#F0F0FF">TruthLens</text>
+                <text x="310" y="95" text-anchor="middle" font-family="Inter" font-size="8" fill="#F0F0FF" opacity="0.5">Sycophancy Score</text>
+                <!-- Score dial -->
+                <circle cx="310" cy="135" r="30" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+                <circle cx="310" cy="135" r="30" fill="none" stroke="#ff6b6b" stroke-width="6" stroke-dasharray="188" stroke-dashoffset="47" opacity="0.8"/>
+                <text x="310" y="131" text-anchor="middle" font-family="Inter" font-size="14" font-weight="700" fill="#ff6b6b">73</text>
+                <text x="310" y="145" text-anchor="middle" font-family="Inter" font-size="7" fill="#F0F0FF" opacity="0.5">HIGH</text>
+                <text x="258" y="190" font-family="Inter" font-size="7" fill="#ff6b6b">⚠ Overly agreeable</text>
+                <text x="258" y="202" font-family="Inter" font-size="7" fill="#F0F0FF" opacity="0.4">No pushback detected</text>
+                <!-- Chat in browser -->
+                <rect x="30" y="70" width="200" height="130" rx="4" fill="#0D0D1A"/>
+                <rect x="40" y="80" width="120" height="16" rx="8" fill="#1A1A2E"/>
+                <rect x="40" y="104" width="100" height="16" rx="8" fill="#6C63FF" opacity="0.3" x="100"/>
+                <rect x="140" y="104" width="80" height="16" rx="8" fill="#6C63FF" opacity="0.7"/>
+                <rect x="40" y="128" width="130" height="16" rx="8" fill="#1A1A2E"/>
+                <rect x="40" y="152" width="90" height="16" rx="8" fill="#6C63FF" opacity="0.7" x="110"/>
+                <rect x="150" y="152" width="70" height="16" rx="8" fill="#6C63FF" opacity="0.7"/>
+                <rect x="30" y="200" width="340" height="1" fill="#6C63FF" opacity="0.1"/>
+                <text x="30" y="240" font-family="Space Grotesk" font-size="18" font-weight="700" fill="#F0F0FF">TruthLens</text>
+                <text x="30" y="258" font-family="Inter" font-size="10" fill="#F0F0FF" opacity="0.5">AI Sycophancy Detector · Chrome Extension</text>
+              </svg>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">Chrome Extension</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Ollama</span>
+                <span class="tag">LLM</span>
+              </div>
+              <h3 class="project-title">TruthLens</h3>
+              <p class="project-summary">Detects sycophancy in AI chatbots. A Chrome extension with a three-layer proxy architecture that intercepts API traffic, scores responses for over-agreeableness, and shows users when their AI is just telling them what they want to hear.</p>
+              <div class="project-meta">
+                <span class="project-role">Solo Builder · Full-Stack + ML</span>
+              </div>
+              <a href="#" class="btn btn-outline" aria-label="View TruthLens case study">Case Study →</a>
+            </div>
+          </article>
+
+          <article class="project-card featured" tabindex="0" aria-label="LSTM System Resource Optimizer project">
+            <div class="project-thumb" style="background: linear-gradient(135deg, #0D1A0A 0%, #1A1A0A 50%, #0A0D1A 100%);" aria-hidden="true">
+              <svg viewBox="0 0 560 316" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0">
+                <rect width="560" height="316" fill="transparent"/>
+                <!-- Graph lines -->
+                <polyline points="30,180 80,160 130,170 180,120 230,130 280,100 330,110 380,80 430,90 480,60" fill="none" stroke="#6C63FF" stroke-width="2" opacity="0.5"/>
+                <polyline points="30,200 80,185 130,190 180,165 230,170 280,145 330,155 380,130 430,140 480,115" fill="none" stroke="#00D4FF" stroke-width="2" opacity="0.5"/>
+                <!-- Prediction line -->
+                <polyline points="480,60 510,45 540,35" fill="none" stroke="#6C63FF" stroke-width="2" stroke-dasharray="5,3"/>
+                <polyline points="480,115 510,100 540,88" fill="none" stroke="#00D4FF" stroke-width="2" stroke-dasharray="5,3"/>
+                <!-- Grid -->
+                <line x1="30" y1="60" x2="540" y2="60" stroke="#fff" stroke-width="0.3" opacity="0.1"/>
+                <line x1="30" y1="120" x2="540" y2="120" stroke="#fff" stroke-width="0.3" opacity="0.1"/>
+                <line x1="30" y1="180" x2="540" y2="180" stroke="#fff" stroke-width="0.3" opacity="0.1"/>
+                <!-- LSTM Label -->
+                <rect x="390" y="40" width="80" height="25" rx="4" fill="#6C63FF" opacity="0.2" stroke="#6C63FF" stroke-width="0.5"/>
+                <text x="430" y="57" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#6C63FF">LSTM Model</text>
+                <!-- Legend -->
+                <rect x="30" y="220" width="12" height="3" rx="1.5" fill="#6C63FF"/>
+                <text x="48" y="224" font-family="Inter" font-size="9" fill="#F0F0FF" opacity="0.6">CPU Usage</text>
+                <rect x="130" y="220" width="12" height="3" rx="1.5" fill="#00D4FF"/>
+                <text x="148" y="224" font-family="Inter" font-size="9" fill="#F0F0FF" opacity="0.6">Memory</text>
+                <rect x="30" y="200" width="500" height="1" fill="#6C63FF" opacity="0.1"/>
+                <text x="30" y="260" font-family="Space Grotesk" font-size="16" font-weight="700" fill="#F0F0FF">LSTM Resource Optimizer</text>
+                <text x="30" y="278" font-family="Inter" font-size="9" fill="#F0F0FF" opacity="0.5">Predictive System Resource Management</text>
+              </svg>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">LSTM</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">NumPy</span>
+              </div>
+              <h3 class="project-title">LSTM System Optimizer</h3>
+              <p class="project-summary">Predicts CPU and memory usage patterns using LSTM neural networks, enabling proactive resource allocation before bottlenecks occur. Academic project with real-world accuracy metrics and a complete research report.</p>
+              <div class="project-meta">
+                <span class="project-role">ML Engineer · Academic Project</span>
+              </div>
+              <a href="#" class="btn btn-outline" aria-label="View LSTM project case study">Case Study →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Thumbnail gallery -->
+        <h3 class="gallery-heading">More work</h3>
+        <div class="projects-gallery">
+          <button class="gallery-thumb" aria-label="GST Notice Explainer project" data-modal="modal-1">
+            <div class="thumb-img" style="background: linear-gradient(135deg,#1A0D2E,#2E1A0D)">
+              <svg viewBox="0 0 240 135" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <rect x="20" y="20" width="200" height="95" rx="6" fill="#1A1A2E" opacity="0.7"/>
+                <text x="120" y="48" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="700" fill="#FFB347">GST Notice</text>
+                <text x="120" y="63" text-anchor="middle" font-family="Inter" font-size="8" fill="#F0F0FF" opacity="0.6">Explainer Wrapper</text>
+                <rect x="35" y="75" width="80" height="4" rx="2" fill="#FFB347" opacity="0.4"/>
+                <rect x="35" y="84" width="60" height="4" rx="2" fill="#F0F0FF" opacity="0.2"/>
+                <rect x="35" y="93" width="70" height="4" rx="2" fill="#F0F0FF" opacity="0.2"/>
+                <text x="185" y="98" text-anchor="middle" font-family="Inter" font-size="20" fill="#FFB347" opacity="0.3">₹</text>
+              </svg>
+            </div>
+            <span class="thumb-title">GST Explainer</span>
+          </button>
+
+          <button class="gallery-thumb" aria-label="Trades AI for Electricians project" data-modal="modal-2">
+            <div class="thumb-img" style="background: linear-gradient(135deg,#0A1A0A,#1A1A0A)">
+              <svg viewBox="0 0 240 135" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <rect x="20" y="20" width="200" height="95" rx="6" fill="#0D1A0D" opacity="0.7"/>
+                <text x="120" y="48" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="700" fill="#4ade80">ElectroAI</text>
+                <text x="120" y="63" text-anchor="middle" font-family="Inter" font-size="8" fill="#F0F0FF" opacity="0.6">Trades AI · Electricians</text>
+                <path d="M100 80 L120 60 L110 75 L130 55 L110 75 L120 90 Z" fill="#4ade80" opacity="0.6"/>
+                <rect x="145" y="72" width="50" height="4" rx="2" fill="#4ade80" opacity="0.4"/>
+                <rect x="145" y="81" width="35" height="4" rx="2" fill="#F0F0FF" opacity="0.2"/>
+              </svg>
+            </div>
+            <span class="thumb-title">ElectroAI</span>
+          </button>
+
+          <button class="gallery-thumb" aria-label="Portfolio website project" data-modal="modal-3">
+            <div class="thumb-img" style="background: linear-gradient(135deg,#0A0A1A,#1A0A1A)">
+              <svg viewBox="0 0 240 135" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <rect x="20" y="20" width="200" height="95" rx="6" fill="#1A1A2E" opacity="0.7"/>
+                <text x="120" y="58" text-anchor="middle" font-family="Space Grotesk" font-size="14" font-weight="700" fill="#6C63FF">TG.</text>
+                <text x="120" y="75" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#F0F0FF" opacity="0.4">portfolio v2</text>
+                <rect x="35" y="85" width="170" height="1" fill="#6C63FF" opacity="0.3"/>
+                <circle cx="45" cy="100" r="5" fill="#6C63FF" opacity="0.5"/>
+                <circle cx="65" cy="100" r="5" fill="#6C63FF" opacity="0.3"/>
+                <circle cx="85" cy="100" r="5" fill="#6C63FF" opacity="0.2"/>
+              </svg>
+            </div>
+            <span class="thumb-title">This Portfolio</span>
+          </button>
+
+          <button class="gallery-thumb" aria-label="Java web app project" data-modal="modal-4">
+            <div class="thumb-img" style="background: linear-gradient(135deg,#1A0A0A,#1A100A)">
+              <svg viewBox="0 0 240 135" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <rect x="20" y="20" width="200" height="95" rx="6" fill="#1A0D0D" opacity="0.7"/>
+                <text x="120" y="55" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="700" fill="#ff6b6b">JSF App</text>
+                <text x="120" y="70" text-anchor="middle" font-family="Inter" font-size="8" fill="#F0F0FF" opacity="0.6">JavaServer Faces · Maven</text>
+                <rect x="35" y="82" width="170" height="28" rx="4" fill="#0A0A0F" opacity="0.6"/>
+                <text x="48" y="93" font-family="JetBrains Mono" font-size="7" fill="#ff6b6b">&lt;h:form&gt;</text>
+                <text x="48" y="104" font-family="JetBrains Mono" font-size="7" fill="#4ade80">  @ManagedBean</text>
+              </svg>
+            </div>
+            <span class="thumb-title">JSF Web App</span>
+          </button>
+
+          <button class="gallery-thumb" aria-label="Algorithm visualizer project" data-modal="modal-5">
+            <div class="thumb-img" style="background: linear-gradient(135deg,#0A0D1A,#0A1A1A)">
+              <svg viewBox="0 0 240 135" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <rect x="20" y="20" width="200" height="95" rx="6" fill="#0D0D1A" opacity="0.7"/>
+                <text x="120" y="48" text-anchor="middle" font-family="Space Grotesk" font-size="10" font-weight="700" fill="#00D4FF">AlgoViz</text>
+                <rect x="35" y="58" width="20" height="45" rx="2" fill="#00D4FF" opacity="0.8"/>
+                <rect x="62" y="70" width="20" height="33" rx="2" fill="#00D4FF" opacity="0.6"/>
+                <rect x="89" y="50" width="20" height="53" rx="2" fill="#00D4FF" opacity="0.9"/>
+                <rect x="116" y="78" width="20" height="25" rx="2" fill="#00D4FF" opacity="0.5"/>
+                <rect x="143" y="63" width="20" height="40" rx="2" fill="#00D4FF" opacity="0.7"/>
+                <rect x="170" y="42" width="20" height="61" rx="2" fill="#6C63FF" opacity="0.8"/>
+              </svg>
+            </div>
+            <span class="thumb-title">AlgoViz</span>
+          </button>
+
+          <button class="gallery-thumb" aria-label="Open source CLI tool project" data-modal="modal-6">
+            <div class="thumb-img" style="background: linear-gradient(135deg,#0A0A0A,#0A1A0A)">
+              <svg viewBox="0 0 240 135" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                <rect x="20" y="20" width="200" height="95" rx="6" fill="#0A0A0F" opacity="0.9" stroke="#4ade80" stroke-width="0.5"/>
+                <text x="30" y="42" font-family="JetBrains Mono" font-size="9" fill="#4ade80">$ tg-cli --help</text>
+                <text x="30" y="57" font-family="JetBrains Mono" font-size="8" fill="#F0F0FF" opacity="0.4">→ TechGod CLI Tools</text>
+                <text x="30" y="71" font-family="JetBrains Mono" font-size="8" fill="#6C63FF" opacity="0.6">  [audit]  scan cloud</text>
+                <text x="30" y="84" font-family="JetBrains Mono" font-size="8" fill="#6C63FF" opacity="0.6">  [lens]   detect bs</text>
+                <text x="30" y="97" font-family="JetBrains Mono" font-size="8" fill="#6C63FF" opacity="0.6">  [watch]  monitor sys</text>
+                <text x="30" y="110" font-family="JetBrains Mono" font-size="8" fill="#4ade80">▊</text>
+              </svg>
+            </div>
+            <span class="thumb-title">CLI Toolset</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="section section-alt" id="stack" aria-label="Tech stack section">
+      <div class="container">
+        <div class="section-label">
+          <span class="mono accent">03</span> Stack
+        </div>
+        <h2 class="section-heading">What I build with</h2>
+        <div class="stack-groups">
+          <div class="stack-group">
+            <h3 class="stack-group-label">AI / ML</h3>
+            <div class="stack-icons">
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="26" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="700" fill="#6C63FF">Py</text>
+                </svg>
+                <span>Python</span>
+              </div>
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="700" fill="#FF6F00">TF</text>
+                </svg>
+                <span>TensorFlow</span>
+              </div>
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="700" fill="#00D4FF">OLLA</text>
+                </svg>
+                <span>Ollama</span>
+              </div>
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="700" fill="#4ade80">RAG</text>
+                </svg>
+                <span>RAG / LLMs</span>
+              </div>
+            </div>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-group-label">Backend</h3>
+            <div class="stack-icons">
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="700" fill="#6C63FF">FAPI</text>
+                </svg>
+                <span>FastAPI</span>
+              </div>
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="700" fill="#ff6b6b">Java</text>
+                </svg>
+                <span>Java</span>
+              </div>
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="7" font-weight="700" fill="#4DB33D">Mongo</text>
+                </svg>
+                <span>MongoDB</span>
+              </div>
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="700" fill="#FF4438">SQL</text>
+                </svg>
+                <span>SQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-group-label">Tools</h3>
+            <div class="stack-icons">
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="700" fill="#2496ED">🐳</text>
+                </svg>
+                <span>Docker</span>
+              </div>
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="700" fill="#FF9900">AWS</text>
+                </svg>
+                <span>AWS</span>
+              </div>
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="700" fill="#F05032">Git</text>
+                </svg>
+                <span>Git</span>
+              </div>
+              <div class="stack-icon">
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="18" fill="#1A1A2E"/>
+                  <text x="20" y="24" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="700" fill="#6C63FF">Flow</text>
+                </svg>
+                <span>Airflow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="section" id="blog" aria-label="Blog section">
+      <div class="container">
+        <div class="section-label">
+          <span class="mono accent">04</span> Notes
+        </div>
+        <h2 class="section-heading">Things I figured out</h2>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-tag">AI/ML</span>
+              <span class="blog-read">5 min</span>
+            </div>
+            <h3 class="blog-title">Why I built a sycophancy detector (and what it found)</h3>
+            <p class="blog-excerpt">AI assistants are trained to please. I got tired of not knowing when they were doing it, so I built TruthLens to score every response.</p>
+            <a href="#" class="blog-link" aria-label="Read full article about sycophancy detector">Read →</a>
+          </article>
+          <article class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-tag">Career</span>
+              <span class="blog-read">4 min</span>
+            </div>
+            <h3 class="blog-title">The three AI skills nobody talks about but everyone needs</h3>
+            <p class="blog-excerpt">LLM security, AI evals, and inference optimization — the underrated skills that separate junior AI devs from the ones who get hired in 2025.</p>
+            <a href="#" class="blog-link" aria-label="Read full article about underrated AI skills">Read →</a>
+          </article>
+          <article class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-tag">Product</span>
+              <span class="blog-read">6 min</span>
+            </div>
+            <h3 class="blog-title">How I went from DSA exam prep to shipping a B2B SaaS product</h3>
+            <p class="blog-excerpt">Building GhostAudit alongside semester exams taught me more about product thinking than any textbook. Here's the honest story.</p>
+            <a href="#" class="blog-link" aria-label="Read full article about shipping GhostAudit">Read →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact" aria-label="Contact section">
+      <div class="container">
+        <div class="section-label">
+          <span class="mono accent">05</span> Contact
+        </div>
+        <div class="contact-grid">
+          <div class="contact-text">
+            <h2 class="section-heading">Let's build<br/>something.</h2>
+            <p>I'm open to internships, freelance projects, collaborations, or just a good technical conversation. If you have a real problem and want someone who'll actually ship — reach out.</p>
+            <div class="contact-links">
+              <a href="mailto:techgod@email.com" class="contact-link" aria-label="Send email">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                techgod@email.com
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub profile (opens in new tab)">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1C4.134 1 1 4.134 1 8c0 3.09 2.004 5.716 4.784 6.641.35.064.478-.152.478-.337 0-.166-.006-.606-.01-1.19-1.947.423-2.358-.94-2.358-.94-.318-.81-.777-1.025-.777-1.025-.635-.434.048-.425.048-.425.702.049 1.071.72 1.071.72.624 1.069 1.637.76 2.036.582.063-.452.244-.76.444-.935-1.554-.177-3.188-.777-3.188-3.46 0-.764.273-1.388.72-1.878-.072-.177-.312-.889.068-1.853 0 0 .587-.188 1.923.717A6.7 6.7 0 018 4.84c.594.003 1.192.08 1.75.234 1.334-.905 1.92-.717 1.92-.717.382.964.141 1.676.069 1.853.449.49.72 1.114.72 1.878 0 2.69-1.637 3.281-3.197 3.455.251.217.475.644.475 1.298 0 .936-.008 1.69-.008 1.92 0 .187.126.405.48.337C12.998 13.714 15 11.09 15 8c0-3.866-3.134-7-7-7z" fill="currentColor"/></svg>
+                github.com/techgod
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn profile (opens in new tab)">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M4 6.5v5M4 4v.5M8 11.5V9a1.5 1.5 0 013 0v2.5M8 6.5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                linkedin.com/in/techgod
+              </a>
+            </div>
+          </div>
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your name" aria-required="true"/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@company.com" aria-required="true"/>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required placeholder="What are you building?" aria-required="true"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <span class="btn-text">Send message</span>
+                <span class="btn-loading" aria-hidden="true">Sending…</span>
+              </button>
+              <div class="form-success" role="alert" aria-live="polite" hidden>
+                ✓ Message sent. I'll reply within 24 hours.
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- CTA Illustration -->
+        <div class="hire-cta" aria-hidden="true">
+          <svg viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg" class="hire-svg">
+            <text x="300" y="72" text-anchor="middle" font-family="Space Grotesk" font-size="64" font-weight="700" fill="#6C63FF" opacity="0.06">HIRE ME</text>
+            <text x="300" y="72" text-anchor="middle" font-family="Space Grotesk" font-size="64" font-weight="700" fill="none" stroke="#6C63FF" stroke-width="1" opacity="0.15">HIRE ME</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <span class="footer-logo">TG<span class="accent">.</span></span>
+      <div class="footer-links">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:techgod@email.com" aria-label="Email">Email</a>
+        <a href="content.json" download aria-label="Download resume">Resume</a>
+      </div>
+      <span class="footer-copy">© 2025 TechGod · Alwar, India</span>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Project case study" hidden>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">×</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
