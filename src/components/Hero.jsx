@@ -1,11 +1,36 @@
+import { useRef } from "react";
 import Typewriter from "./Typewriter";
+import GradientText from "./GradientText";
+import GlitchText from "./GlitchText";
 import siteContent from "../data/content.json";
+import { useCountUp } from "../hooks/useCountUp";
+import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
 
 export default function Hero() {
   const { contactEmail, stats } = siteContent;
+  const heroRef = useRef(null);
+  const reducedMotion = usePrefersReducedMotion();
+
+  const [projectsRef, projectsCount] = useCountUp(stats.projectsShipped);
+  const [semestersRef, semestersCount] = useCountUp(stats.semestersStudied);
+
+  const handleMouseMove = (e) => {
+    if (reducedMotion) return;
+    const el = heroRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    el.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+    el.style.setProperty("--my", `${e.clientY - rect.top}px`);
+  };
 
   return (
-    <section className="hero" id="home" aria-label="Hero section">
+    <section
+      className="hero"
+      id="home"
+      aria-label="Hero section"
+      ref={heroRef}
+      onMouseMove={handleMouseMove}
+    >
       <div className="hero-bg" aria-hidden="true">
         <svg className="hero-shape" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
           <defs>
@@ -31,11 +56,25 @@ export default function Hero() {
           <line x1="750" y1="200" x2="860" y2="320" stroke="#6C63FF" strokeWidth="0.5" opacity="0.15" />
         </svg>
       </div>
+      <div className="hero-cursor-glow" aria-hidden="true"></div>
       <div className="container hero-inner">
         <div className="hero-text">
           <div className="hero-eyebrow">
             <span className="dot-live" aria-hidden="true"></span>
             Available for opportunities
+          </div>
+          <div className="hero-name">
+            <GradientText
+              as="span"
+              className="hero-name-text"
+              colors={["#6C63FF", "#00D4FF", "#4ade80", "#6C63FF"]}
+              animationSpeed={8}
+            >
+              TechGod
+            </GradientText>
+            <span className="hero-name-sub mono">
+              <GlitchText as="span">AI Agent Engineer</GlitchText>
+            </span>
           </div>
           <h1 className="hero-heading">
             Building things
@@ -58,11 +97,11 @@ export default function Hero() {
           </div>
           <div className="hero-stats">
             <div className="stat">
-              <span className="stat-num">{stats.projectsShipped}+</span>
+              <span className="stat-num" ref={projectsRef}>{projectsCount}+</span>
               <span className="stat-label">Projects shipped</span>
             </div>
             <div className="stat">
-              <span className="stat-num">{stats.semestersStudied}</span>
+              <span className="stat-num" ref={semestersRef}>{semestersCount}</span>
               <span className="stat-label">Semesters building</span>
             </div>
             <div className="stat">

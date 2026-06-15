@@ -1,4 +1,5 @@
 import AnimatedSection from "./AnimatedSection";
+import LogoLoop from "./LogoLoop";
 
 const stackGroups = [
   {
@@ -30,26 +31,32 @@ const stackGroups = [
   },
 ];
 
-function StackIcon({ item }) {
+function StackIcon({ item, bare = false }) {
   const fontSize = item.size ?? 8;
   const color = item.color ?? "#6C63FF";
 
+  const svg = (
+    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="20" cy="20" r="18" fill="#1A1A2E" />
+      <text
+        x="20"
+        y="24"
+        textAnchor="middle"
+        fontFamily="Space Grotesk"
+        fontSize={fontSize}
+        fontWeight="700"
+        fill={color}
+      >
+        {item.text}
+      </text>
+    </svg>
+  );
+
+  if (bare) return svg;
+
   return (
     <div className="stack-icon">
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="20" cy="20" r="18" fill="#1A1A2E" />
-        <text
-          x="20"
-          y="24"
-          textAnchor="middle"
-          fontFamily="Space Grotesk"
-          fontSize={fontSize}
-          fontWeight="700"
-          fill={color}
-        >
-          {item.text}
-        </text>
-      </svg>
+      {svg}
       <span>{item.label}</span>
     </div>
   );
@@ -63,6 +70,14 @@ export default function Stack() {
           <span className="mono accent">03</span> Stack
         </div>
         <h2 className="section-heading">What I build with</h2>
+        <LogoLoop
+          items={stackGroups.flatMap((g) => g.items).map((item) => ({
+            label: item.label,
+            node: <StackIcon item={item} bare />,
+          }))}
+          speed={32}
+          className="stack-loop"
+        />
         <div className="stack-groups">
           {stackGroups.map((group) => (
             <AnimatedSection key={group.label} className="stack-group" name={`stack-${group.label}`}>

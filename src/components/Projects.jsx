@@ -1,5 +1,6 @@
 import { startTransition } from "react";
 import AnimatedSection from "./AnimatedSection";
+import { useTilt } from "../hooks/useTilt";
 import siteContent from "../data/content.json";
 
 const galleryItems = [
@@ -56,17 +57,13 @@ export default function Projects({ onOpenModal }) {
                 tabIndex={0}
                 aria-label={`${project.title} project`}
               >
-                <div
-                  className="project-thumb"
-                  style={meta.thumbStyle}
-                  aria-hidden="true"
-                >
+                <TiltCard className="project-thumb" style={meta.thumbStyle} aria-hidden="true">
                   <FeaturedThumb index={i} />
-                </div>
+                </TiltCard>
                 <div className="project-info">
                   <div className="project-tags">
-                    {meta.tags.map((tag) => (
-                      <span key={tag} className="tag">
+                    {meta.tags.map((tag, ti) => (
+                      <span key={tag} className="tag tag-stagger" style={{ "--stagger": ti }}>
                         {tag}
                       </span>
                     ))}
@@ -97,13 +94,30 @@ export default function Projects({ onOpenModal }) {
               aria-label={item.ariaLabel}
               onClick={() => openModal(item.id)}
             >
-              <GalleryThumb id={item.id} />
+              <TiltCard className="thumb-tilt-wrap" max={4} scale={1.03}>
+                <GalleryThumb id={item.id} />
+              </TiltCard>
               <span className="thumb-title">{item.title}</span>
             </AnimatedSection>
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function TiltCard({ children, className = "", style, max, scale, ...rest }) {
+  const tiltRef = useTilt(
+    max !== undefined || scale !== undefined
+      ? { ...(max !== undefined ? { max } : {}), ...(scale !== undefined ? { scale } : {}) }
+      : undefined
+  );
+
+  return (
+    <div ref={tiltRef} className={`tilt-card ${className}`.trim()} style={style} {...rest}>
+      {children}
+      <div className="tilt-glow" aria-hidden="true"></div>
+    </div>
   );
 }
 

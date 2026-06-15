@@ -1,3 +1,4 @@
+import GradientText from "./GradientText";
 import siteContent from "../data/content.json";
 
 export default function Footer() {
@@ -7,7 +8,7 @@ export default function Footer() {
     <footer className="footer" role="contentinfo">
       <div className="container footer-inner">
         <span className="footer-logo">
-          TG<span className="accent">.</span>
+          <GradientText as="span" animationSpeed={5}>TG.</GradientText>
         </span>
         <div className="footer-links">
           <a href={github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">

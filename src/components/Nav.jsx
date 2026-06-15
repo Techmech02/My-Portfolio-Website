@@ -1,11 +1,21 @@
 import { useEffect, useState } from "react";
+import GradientText from "./GradientText";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24);
+
+      const doc = document.documentElement;
+      const scrollable = doc.scrollHeight - doc.clientHeight;
+      const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+      setProgress(pct);
+    };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -36,9 +46,12 @@ export default function Nav() {
 
   return (
     <nav className={`nav${scrolled ? " scrolled" : ""}`} role="navigation" aria-label="Main navigation">
+      <div className="nav-progress" aria-hidden="true">
+        <div className="nav-progress-bar" style={{ width: `${progress}%` }} />
+      </div>
       <div className="nav-inner container">
         <a href="#" className="nav-logo" aria-label="Home">
-          TG<span className="accent">.</span>
+          <GradientText as="span" animationSpeed={5}>TG.</GradientText>
         </a>
         <ul className="nav-links" role="list">
           <li><a href="#about">About</a></li>
