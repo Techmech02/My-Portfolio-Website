@@ -893,6 +893,72 @@ ul, ol { list-style: none; }
 .modal-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 
 /* =============================================
+   REACT VIEW TRANSITIONS & SCROLL REVEAL
+   ============================================= */
+.animated-section {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+::view-transition-old(modal-root),
+::view-transition-new(modal-root) {
+  animation-duration: 0.25s;
+}
+
+::view-transition-old(reveal-item),
+::view-transition-new(reveal-item),
+::view-transition-old(project-card),
+::view-transition-new(project-card),
+::view-transition-old(blog-card),
+::view-transition-new(blog-card),
+::view-transition-old(gallery-thumb),
+::view-transition-new(gallery-thumb),
+::view-transition-old(stack-group),
+::view-transition-new(stack-group) {
+  animation-duration: 0.45s;
+}
+
+/* =============================================
+   FORM SECURITY & VALIDATION
+   ============================================= */
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-error {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--red);
+}
+
+.form-error-block {
+  padding: 12px 16px;
+  background: rgba(255, 107, 107, 0.08);
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  border-radius: var(--radius);
+}
+
+/* =============================================
    RESPONSIVE
    ============================================= */
 @media (max-width: 1024px) {

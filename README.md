@@ -1,71 +1,74 @@
 # TechGod Portfolio
 
-Dark, terminal-coded developer portfolio for a CSE fresher targeting AI/ML roles.
+Dark, terminal-coded developer portfolio for a CSE fresher targeting AI/ML roles. Built with **React 19**, **Vite**, React `<ViewTransition>` animations ([react.dev](https://react.dev/reference/react/ViewTransition)), security hardening, and **Vitest** tests.
+
+## Stack
+
+- React 19 (canary) + Vite
+- React `<ViewTransition>` + `startTransition` for modal and scroll-reveal animations
+- Security: input sanitization, honeypot, rate limiting, CSP headers, safe link handling
+- Vitest + React Testing Library (26 tests)
 
 ## Files
+
 ```
-index.html      — Main page (single HTML file)
-styles.css      — All styles with CSS custom properties
-scripts.js      — Typewriter, modals, nav, form, scroll reveal
-content.json    — All site content (update this first)
-README.md       — This file
+index.html              — Vite entry
+src/
+  App.jsx               — Root layout
+  components/           — Nav, Hero, About, Projects, Stack, Blog, Contact, Modal
+  utils/security.js     — Validation & sanitization
+  data/content.json     — Site content (update this first)
+  styles.css            — All styles
+public/
+  content.json          — Downloadable CV/resume JSON
+  _headers              — Netlify security headers (CSP, etc.)
+```
+
+## Commands
+
+```bash
+npm install
+npm run dev       # Local dev server
+npm run build     # Production build → dist/
+npm test          # Run test suite
+npm run preview   # Preview production build
 ```
 
 ## Customize before deploying
 
-1. **content.json** — Update name, email, GitHub, projects, blog posts
-2. **index.html** — Search for `techgod@email.com` and replace with your real email
-3. **index.html** — Update GitHub and LinkedIn links (search `github.com/techgod`)
-4. **Avatar** — Replace the SVG avatar in the hero section with your actual photo (use a circular `<img>` tag inside `.avatar-ring`)
+1. **src/data/content.json** — Update name, email, GitHub, projects, blog posts (also copy to `public/content.json`)
+2. **Contact form** — Wire up Formspree or your API in `src/components/Contact.jsx`
+3. **Avatar** — Replace the SVG avatar in `Hero.jsx` with your photo
 
-## Deploy in 2 minutes
+## Deploy
 
-### Netlify (recommended — free)
+### Netlify (recommended)
 ```bash
-# Drag and drop the folder to https://app.netlify.com/drop
-# OR use the CLI:
-npm install -g netlify-cli
-netlify deploy --prod --dir .
+npm run build
+# Drag dist/ to https://app.netlify.com/drop
+# OR: netlify deploy --prod --dir=dist
 ```
 
 ### Vercel
 ```bash
-npm install -g vercel
+npm run build
 vercel --prod
 ```
 
-### GitHub Pages
+## Security features
+
+- **No innerHTML** — Modal content rendered as React elements (XSS-safe)
+- **Form validation** — Email regex, length limits, honeypot anti-spam field
+- **Rate limiting** — 5-second cooldown between form submissions
+- **CSP headers** — Configured in `public/_headers` for Netlify
+- **External links** — `rel="noopener noreferrer"` on all outbound links
+
+## Testing
+
 ```bash
-git init
-git add .
-git commit -m "Portfolio"
-git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
-git push -u origin main
-# Enable GitHub Pages in repo settings → Pages → Deploy from branch: main
+npm test              # Run all tests once
+npm run test:watch    # Watch mode
+npm run test:coverage # With coverage report
 ```
 
-## Custom domain
-Once deployed on Netlify/Vercel, go to your dashboard → Domain settings → Add custom domain.
-Buy a domain from Namecheap (~₹800/year for a `.dev` domain).
-
-## Performance checklist
-- [ ] Replace placeholder email with real email
-- [ ] Update all social links
-- [ ] Add your actual photo to the avatar section
-- [ ] Update project descriptions in `modalData` in `scripts.js`
-- [ ] Add real blog post links when you publish
-- [ ] Test on mobile (Chrome DevTools → Toggle device toolbar)
-- [ ] Run Lighthouse audit (DevTools → Lighthouse → Generate report)
-
-## Contact form
-The form currently simulates a send. To make it actually send emails:
-1. Sign up at https://formspree.io (free tier = 50 submissions/month)
-2. Create a new form → get your endpoint URL
-3. In `scripts.js`, replace the `setTimeout` simulation with:
-```javascript
-const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-  method: "POST",
-  headers: { "Accept": "application/json" },
-  body: new FormData(form)
-});
-```
+Tests cover security utilities, contact form validation, modal behavior, and app smoke tests.
