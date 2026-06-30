@@ -1,69 +1,37 @@
 export const modalData = {
-  "modal-1": {
-    title: "GST Notice Explainer",
-    sub: "SaaS Wrapper · Revenue-first product",
+  "ai-resource-optimization": {
+    title: "AI Resource Optimization Platform",
+    sub: "Predictive resource monitoring and optimization",
     challenge:
-      "Indian SMBs receive GST notices they don't understand — leading to panic, bad decisions, and expensive CA consultations for simple compliance issues.",
+      "Modern edge devices and mobile systems face severe thermal and battery constraints under unpredictable workloads. Reactive scaling of CPU frequencies leads to lag spikes, thermal throttling, and inefficient battery depletion.",
     approach:
-      "Built an LLM-powered wrapper that ingests GST notice PDFs, identifies the notice type (demand, scrutiny, mismatch), explains it in plain Hindi/English, and suggests next steps. Designed for non-accountant small business owners.",
+      "Engineered an end-to-end predictive framework. Set up a daemon to collect real-time CPU usage, memory load, and battery drain metrics. Trained a Long Short-Term Memory (LSTM) network in TensorFlow/Keras to forecast future resource utilization sequences. Created a Flask API endpoint to serve predictions to a lightweight power-governor simulation that dynamically adjusts frequency profiles, reducing simulated system overhead by 30%.",
     outcome:
-      "Early revenue product. Targeting ₹499/notice or subscription tier. Validated demand with Alwar-based traders.",
-    tech: ["Python", "FastAPI", "PDF parsing", "LLM API", "React"],
+      "Successfully predicted workload spikes 5-10 seconds in advance with high accuracy, allowing proactive system adjustment. Reduced battery temperature spikes and power consumption overhead significantly.",
+    tech: ["Python", "LSTM", "TensorFlow", "Keras", "Flask", "NumPy", "Matplotlib"],
   },
-  "modal-2": {
-    title: "ElectroAI — Trades AI",
-    sub: "Long-term moat · Hyper-vertical AI",
+  "ghost-audit": {
+    title: "Ghost-Audit: AWS Resource Analyser",
+    sub: "Cloud intelligence and cost optimization",
     challenge:
-      "Indian electricians carry all their knowledge in their heads. When they retire, it goes with them. There's no accessible, language-appropriate tool for on-the-job help.",
+      "In fast-paced development cycles, cloud resources (EC2, S3, RDS) are frequently orphaned or left running idle, leading to silent and massive budget leaks that are difficult to track manually across multiple regions.",
     approach:
-      "A hyper-narrow AI assistant trained on Indian electrical codes, wiring standards, and common fault patterns — accessible via a simple SMS/WhatsApp interface. No app install required.",
+      "Built a python-based CLI and backend agent that uses the boto3 SDK to query and analyze AWS metrics (CPU, network, disk activity, and S3 access logs). Defined logic to classify resources as 'ghost' (underutilized or orphaned). Integrated DVC (Data Version Control) to version and track scanner datasets. Set up n8n workflows to run daily automated checks and dispatch structured Slack alert dashboards to administrators.",
     outcome:
-      "18-month build. Currently in research/design phase. Targeting Indian electrician unions and training institutes for distribution.",
-    tech: ["LLM fine-tuning", "WhatsApp API", "Python", "Domain RAG", "Hindi NLP"],
+      "Created a zero-cost automated cost-auditing flow. Eliminated manual tracking efforts completely, generating clean markdown reports detailing cost leaks and saving up to 35% of simulated development-stage cloud budgets.",
+    tech: ["Python", "AWS", "boto3", "DVC", "n8n Automation", "Docker", "Shell scripting"],
   },
-  "modal-3": {
-    title: "This Portfolio",
-    sub: "Personal project · Shipped in one session",
+  "adaptive-mcq-system": {
+    title: "Adaptive AI MCQ Testing System",
+    sub: "Personalized AI-driven student assessment",
     challenge:
-      "Most fresher portfolios look identical — a template with placeholder text. Needed something that showed product thinking, not just technology knowledge.",
+      "Standard academic tests are static and linear. They fail to adapt to a student's individual learning curve, causing frustration for struggling learners and boredom for advanced ones.",
     approach:
-      "Designed from scratch with a specific visual identity: dark, dense, terminal-coded. Every section has a job. No stock images. Real project descriptions. Built with React for performance and maintainability.",
-    outcome: "You're looking at it. Fast, accessible, mobile-responsive, tested and secure.",
-    tech: ["React", "Vite", "View Transitions", "Vitest", "Security hardening"],
-  },
-  "modal-4": {
-    title: "JSF Web Application",
-    sub: "Academic · Java EE Stack",
-    challenge:
-      "Learning JavaServer Faces for a college project while simultaneously building towards modern web standards.",
-    approach:
-      "Built a full CRUD web application with JSF, Maven, Mojarra, and Tomcat. Implemented ManagedBeans, validation, and navigation flows. Used it to understand the Java EE component lifecycle.",
+      "Architected an adaptive exam engine. Implemented Item Response Theory (IRT) probability models to calculate a student's latent ability (theta) in real time after every answer. The engine dynamically queries a structured question bank (categorized by difficulty, discrimination, and guessing parameters) to serve the next optimal question. Built a full-stack dashboard in Flask and SQLite for managing questions, tracking sessions, and displaying performance curves.",
     outcome:
-      "Academic credit + deeper understanding of component-based MVC patterns that informed my FastAPI and React work.",
-    tech: ["JSF", "Java EE", "Maven", "Mojarra", "Tomcat", "MySQL"],
-  },
-  "modal-5": {
-    title: "AlgoViz — Algorithm Visualizer",
-    sub: "Educational tool · Open source",
-    challenge:
-      "Sorting algorithms are taught abstractly. Students memorize Big-O without understanding why. Needed a visual learning tool.",
-    approach:
-      "Interactive visualizer for 8 sorting algorithms (bubble, merge, quick, heap, insertion, selection, shell, radix). Adjustable array size and speed. Color-coded comparisons, swaps, and sorted elements.",
-    outcome:
-      "Used by classmates for exam prep. Helped explain concepts in 5 minutes that lectures took 2 hours to cover.",
-    tech: ["JavaScript", "HTML5 Canvas", "CSS Animations", "Vanilla JS"],
-  },
-  "modal-6": {
-    title: "CLI Toolset",
-    sub: "Developer tools · Personal use + open source",
-    challenge:
-      "Repetitive tasks across my projects: spinning up dev environments, running linters, deploying to test servers, checking cloud costs.",
-    approach:
-      "A unified CLI wrapper for my most-used tools: GhostAudit scanner, TruthLens scoring, system monitor. Built with Click (Python), distributed as a pip package.",
-    outcome:
-      "Saves ~20 min/day. Open-sourced it. A few GitHub stars from other students who forked it.",
-    tech: ["Python", "Click", "Subprocess", "Pip packaging", "Shell scripting"],
-  },
+      "Achieved higher measurement accuracy in 40% fewer questions compared to static testing. Plotted real-time confidence intervals of estimated student ability to demonstrate learning progression.",
+    tech: ["Python", "Flask", "Machine Learning", "IRT Algorithms", "SQLite", "Chart.js"],
+  }
 };
 
-export const typewriterWords = ["work.", "ships.", "matters.", "scales.", "solves."];
+export const typewriterWords = ["systems.", "models.", "pipelines.", "automation.", "solutions."];

@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
+import usePrefersReducedMotion from "./usePrefersReducedMotion";
 
 /**
  * Animates a number from 0 to `end` when the returned ref enters the viewport.
  * Returns [ref, value] — attach ref to the element you want to observe.
  */
-export function useCountUp(end, { duration = 1200, threshold = 0.4 } = {}) {
+export default function useCountUp(end, { duration = 1200, threshold = 0.4 } = {}) {
   const ref = useRef(null);
   const [value, setValue] = useState(end);
   const reducedMotion = usePrefersReducedMotion();

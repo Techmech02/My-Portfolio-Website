@@ -1,84 +1,83 @@
 {
-  "siteTitle": "TechGod | Developer Portfolio",
-  "tagline": "Building things that actually matter.",
-  "bio": "6th semester CSE student at MITRC, Alwar — shipping AI/ML products, full-stack apps, and open-source tools. I don't wait for the degree. Pursuing a serious GenAI Engineer path: RAG systems, agentic workflows, vector databases, and LLM API development.",
-  "contactEmail": "techgod@email.com",
-  "location": "Alwar, Rajasthan, India",
-  "github": "https://github.com/techgod",
-  "linkedin": "https://linkedin.com/in/techgod",
+  "siteTitle": "Sagar Bhati | AI/ML Engineer",
+  "tagline": "Building scalable AI systems and cloud-powered intelligent solutions.",
+  "bio": "Results-driven AI/ML Engineering student with hands-on experience designing and deploying machine learning systems, cloud-based automation tools, and intelligent applications. Proficient in Python, deep learning frameworks, and AWS cloud services. Demonstrated ability to solve real-world problems through LSTM-based time-series modelling, cloud resource optimisation, and adaptive AI systems.",
+  "contactEmail": "techbot096@gmail.com",
+  "location": "Ajmer, Rajasthan, India",
+  "github": "https://github.com/Techmech02",
+  "linkedin": "https://linkedin.com/in/sagar-bhati-6079b8352",
+  "phone": "+91 94610 42994",
+  "education": {
+    "degree": "Bachelor of Technology — Computer Science & Engineering",
+    "institution": "Modern Institute of Technology and Research Centre (MITRC)",
+    "location": "Ajmer, Rajasthan, India",
+    "expected": "Expected May 2027",
+    "cgpa": "8.2 / 10.0"
+  },
   "stats": {
     "yearsBuilding": 3,
-    "projectsShipped": 6,
-    "liveProducts": 2,
+    "projectsShipped": 3,
+    "liveProducts": 1,
     "semestersStudied": 6
   },
-  "skills": [
-    { "name": "Python / AI/ML", "level": 78 },
-    { "name": "FastAPI / Backend", "level": 75 },
-    { "name": "Java / Full-Stack", "level": 70 },
-    { "name": "Docker / DevOps", "level": 65 },
-    { "name": "LLMs / RAG / Agents", "level": 68 },
-    { "name": "React / Frontend", "level": 60 }
-  ],
+  "skillCategories": {
+    "Languages": ["Python", "Java", "C"],
+    "ML / DL": ["Machine Learning", "Deep Learning", "LSTM", "Time-Series Modelling", "Supervised & Unsupervised Learning"],
+    "Frameworks / Libs": ["scikit-learn", "TensorFlow / Keras", "Flask", "boto3"],
+    "Cloud & DevOps": ["AWS (SageMaker, EC2, S3)", "Git", "DVC", "n8n Automation"],
+    "Concepts": ["Data Structures & Algorithms", "OS", "Computer Networks", "Database Systems", "Cloud Resource Optimisation"]
+  },
   "projects": [
     {
-      "title": "GhostAudit",
-      "summary": "B2B SaaS tool that detects and visualizes cloud cost leaks in ML infrastructure. Scans AWS for idle resources, orphaned storage, and wasteful compute.",
-      "role": "Solo Builder · Backend + Product",
-      "tech": ["FastAPI", "AWS", "Airflow", "Docker", "Python"],
-      "images": ["assets/ghost-audit-thumb.svg"]
+      "id": "ai-resource-optimization",
+      "title": "AI Resource Optimization Platform",
+      "summary": "Engineered an end-to-end predictive system that monitors real-time CPU usage and battery consumption, forecasting resource utilization using an LSTM model. Includes an AI recommendation engine that dynamically suggests performance optimizations, reducing simulated resource overhead by 30%.",
+      "role": "Lead ML Engineer · Architecture & ML",
+      "tech": ["Python", "LSTM", "TensorFlow", "Keras", "Flask"],
+      "featured": true,
+      "images": ["/images/project-lstm.jpg"]
     },
     {
-      "title": "TruthLens",
-      "summary": "Detects sycophancy in AI chatbots. Chrome extension with three-layer proxy architecture that intercepts API traffic and scores responses for over-agreeableness.",
-      "role": "Solo Builder · Full-Stack + ML",
-      "tech": ["Chrome Extension", "FastAPI", "Ollama", "LLM", "Python"],
-      "images": ["assets/truthlens-thumb.svg"]
+      "id": "ghost-audit",
+      "title": "Ghost-Audit: AWS Resource Analyser",
+      "summary": "Developed a cloud intelligence tool that automatically detects idle and underutilized AWS resources (EC2, S3, RDS) using the boto3 SDK, helping reduce unnecessary cloud spend. Designed automated n8n workflows for scheduled audits and alert notifications, and integrated DVC for reproducible experiment tracking.",
+      "role": "Solo Builder · AWS Cloud + DevOps",
+      "tech": ["Python", "AWS", "boto3", "DVC", "n8n Automation"],
+      "featured": true,
+      "images": ["/images/project-ghost.jpg"]
     },
     {
-      "title": "LSTM System Optimizer",
-      "summary": "Predicts CPU and memory usage patterns using LSTM neural networks, enabling proactive resource allocation before bottlenecks occur.",
-      "role": "ML Engineer · Academic Project",
-      "tech": ["Python", "LSTM", "TensorFlow", "NumPy", "Matplotlib"],
-      "images": ["assets/lstm-thumb.svg"]
-    },
-    {
-      "title": "GST Notice Explainer",
-      "summary": "LLM-powered wrapper that explains GST notices to Indian SMBs in plain Hindi/English and suggests next steps. Revenue-first wrapper product.",
-      "role": "Founder · Full-Stack + LLM",
-      "tech": ["Python", "FastAPI", "LLM API", "PDF parsing", "React"]
-    },
-    {
-      "title": "ElectroAI",
-      "summary": "Hyper-narrow AI assistant for Indian electricians — accessible via WhatsApp, trained on Indian electrical codes. 18-month build.",
-      "role": "Founder · Research + Design",
-      "tech": ["LLM fine-tuning", "WhatsApp API", "Python", "Hindi NLP"]
-    },
-    {
-      "title": "AlgoViz",
-      "summary": "Interactive visualizer for 8 sorting algorithms. Used by classmates for exam prep.",
-      "role": "Solo Builder · Educational Tool",
-      "tech": ["JavaScript", "HTML5 Canvas", "CSS Animations"]
+      "id": "adaptive-mcq-system",
+      "title": "Adaptive AI MCQ Testing System",
+      "summary": "Architected an AI-driven assessment platform that dynamically adjusts question difficulty in real time based on individual student performance metrics. Implemented an adaptive algorithm using Item Response Theory (IRT) principles, improving assessment accuracy and personalization.",
+      "role": "Founder · Full-Stack + ML",
+      "tech": ["Python", "Flask", "Machine Learning", "IRT Algorithms", "SQL"],
+      "featured": true,
+      "featuredBadge": "Adaptive ML",
+      "images": ["/images/project-mcq.jpg"]
     }
   ],
   "blog": [
     {
-      "title": "Why I built a sycophancy detector (and what it found)",
+      "title": "Deploying Machine Learning at the Edge: Memory vs Latency",
       "tag": "AI/ML",
       "readTime": "5 min",
-      "excerpt": "AI assistants are trained to please. I got tired of not knowing when they were doing it, so I built TruthLens to score every response."
+      "url": "https://medium.com",
+      "excerpt": "Analyzing optimization techniques for deep learning models when resource constraints are severe. A look into LSTM quantization and pruning."
     },
     {
-      "title": "The three AI skills nobody talks about but everyone needs",
-      "tag": "Career",
-      "readTime": "4 min",
-      "excerpt": "LLM security, AI evals, and inference optimization — the underrated skills that separate junior AI devs from the ones who get hired."
-    },
-    {
-      "title": "How I went from DSA exam prep to shipping a B2B SaaS product",
-      "tag": "Product",
+      "title": "Building a Zero-Cost AWS Audit Tool with Python and n8n",
+      "tag": "DevOps",
       "readTime": "6 min",
-      "excerpt": "Building GhostAudit alongside semester exams taught me more about product thinking than any textbook. Here's the honest story."
+      "url": "https://medium.com",
+      "excerpt": "A step-by-step guide to tracking idle instances, orphaned volumes, and hidden cost leaks using the boto3 SDK and lightweight automation."
+    },
+    {
+      "title": "Understanding Item Response Theory in Adaptive Learning Systems",
+      "tag": "Education",
+      "readTime": "4 min",
+      "url": "https://medium.com",
+      "excerpt": "Why traditional static tests are failing students and how we can use probability models to gauge true learner competency dynamically."
     }
   ]
 }

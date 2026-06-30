@@ -1,0 +1,35 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono), monospace;
+  font-weight: 500;
+  border-radius: 4px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.default {
+  background: rgba(124, 106, 255, 0.06);
+  border: 1px solid rgba(124, 106, 255, 0.15);
+  color: var(--accent-2);
+}
+
+.accent {
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  color: var(--accent-2);
+}
+
+.highlight {
+  background: rgba(244, 114, 182, 0.06);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+  color: var(--accent-3);
+}
+
+.success {
+  background: rgba(74, 222, 128, 0.06);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  color: var(--success);
+}

@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
-import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
+import usePrefersReducedMotion from "./usePrefersReducedMotion";
 
 /**
  * Adds a subtle 3D tilt + glow-follow effect on mouse move.
  * Attach the returned ref to the card element.
  */
-export function useTilt({ max = 6, scale = 1.015 } = {}) {
+export default function useTilt({ max = 6, scale = 1.015 } = {}) {
   const ref = useRef(null);
   const reducedMotion = usePrefersReducedMotion();
 

@@ -1,0 +1,69 @@
+.container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  user-select: none;
+  position: relative;
+}
+
+/* Edge fade gradients using CSS mask-image */
+.fade {
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll var(--speed) linear infinite;
+  gap: var(--gap);
+}
+
+/* Pause scroll when cursor hovers on items */
+.track:hover {
+  animation-play-state: paused;
+}
+
+.group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Translate exactly half of the double-width container */
+    transform: translateX(calc(-50% - (var(--gap) / 2)));
+  }
+}
+
+/* Fallback for SSR / static reduced-motion mode */
+.staticContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

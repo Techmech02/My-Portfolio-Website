@@ -1,0 +1,143 @@
+.main {
+  min-height: 100vh;
+  padding: 60px 0;
+  position: relative;
+  background-color: var(--base);
+  display: flex;
+  flex-direction: column;
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  margin-bottom: 36px;
+}
+
+.backLink {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.85rem;
+  color: var(--accent-2);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--text);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.2);
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Header Card */
+.headerCard {
+  padding: 48px;
+  border-color: var(--border);
+}
+
+@media (max-width: 768px) {
+  .headerCard {
+    padding: 32px 24px;
+  }
+}
+
+.headerMeta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+}
+
+.roleLabel {
+  color: var(--text-muted);
+}
+
+.roleValue {
+  color: var(--accent-3);
+  font-weight: 500;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.badgeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Content grid of detailed blocks */
+.contentGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sectionCard {
+  padding: 32px;
+  border-color: var(--border);
+}
+
+.sectionTitle {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionNumber {
+  font-family: var(--font-mono), monospace;
+  font-size: 1rem;
+  color: var(--accent-2);
+  letter-spacing: 0;
+}
+
+.sectionText {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Return actions */
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}

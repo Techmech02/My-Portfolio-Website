@@ -64,6 +64,9 @@ export function validateContactForm({ name, email, message, honeypot = "" }) {
 
 export function isExternalUrl(url) {
   try {
+    if (typeof window === "undefined") {
+      return url.startsWith("http://") || url.startsWith("https://");
+    }
     const parsed = new URL(url, window.location.origin);
     return parsed.origin !== window.location.origin;
   } catch {

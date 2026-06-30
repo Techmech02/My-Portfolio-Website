@@ -1,0 +1,242 @@
+.contact {
+  position: relative;
+  padding: 80px 0;
+  background-color: var(--base);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* Left column details */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+}
+
+.title {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.infoLabel {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--accent-3);
+  width: 90px;
+}
+
+.infoLink,
+.infoValue {
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.infoLink:hover {
+  color: var(--accent-2);
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.socialBtn {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  background: rgba(12, 12, 30, 0.4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.socialBtn:hover {
+  border-color: var(--accent);
+  background: rgba(124, 106, 255, 0.05);
+  color: var(--accent-2);
+}
+
+/* Subtle hire me watermark text background */
+.watermark {
+  font-family: var(--font-display), sans-serif;
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: var(--accent-glow);
+  opacity: 0.12;
+  position: absolute;
+  bottom: -90px;
+  left: 0;
+  z-index: -1;
+  letter-spacing: -0.05em;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 960px) {
+  .watermark {
+    display: none;
+  }
+}
+
+/* Right column form details */
+.formCard {
+  padding: 40px;
+  border-color: var(--border);
+}
+
+@media (max-width: 480px) {
+  .formCard {
+    padding: 24px 16px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.honeypot {
+  display: none;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(5, 5, 16, 0.5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-2);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.15);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.inputError {
+  border-color: var(--error) !important;
+}
+
+.errorText {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  color: var(--error);
+  margin-top: 4px;
+}
+
+.formError {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  color: var(--error);
+  padding: 12px;
+  background: rgba(255, 107, 107, 0.05);
+  border: 1px solid rgba(255, 107, 107, 0.15);
+  border-radius: var(--radius-sm);
+}
+
+.submitWrapper {
+  margin-top: 8px;
+}
+
+.submitBtn {
+  width: 100%;
+}
+
+/* Success layout overlay */
+.successWrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.successIcon {
+  width: 48px;
+  height: 48px;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1.5px solid var(--success);
+  border-radius: 50%;
+  color: var(--success);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.successTitle {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.35rem;
+  color: var(--text);
+}
+
+.successText {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 280px;
+  margin-bottom: 8px;
+}

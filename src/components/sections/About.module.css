@@ -1,0 +1,172 @@
+.about {
+  position: relative;
+  padding: 80px 0;
+  background-color: var(--base);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* Left Column */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.bioText {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.educationWrapper {
+  width: 100%;
+}
+
+.eduCard {
+  padding: 24px;
+}
+
+.eduTitle {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.eduItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.eduDegree {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--accent-2);
+}
+
+.eduInstitution {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.eduMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.eduSeparator {
+  color: var(--accent);
+}
+
+.eduCgpa {
+  color: var(--accent-3);
+  font-weight: 500;
+}
+
+.cvWrapper {
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .cvWrapper a,
+  .cvWrapper button {
+    width: 100%;
+  }
+}
+
+/* Right Column */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.sectionSub {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.skillBars {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tag Sections */
+.tagSection {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+
+.tagTitle {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.tagGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tagGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.groupLabel {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  background: rgba(124, 106, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  border-color: var(--accent-2);
+  background: rgba(0, 212, 255, 0.05);
+  color: var(--accent-2);
+  transform: translateY(-1px);
+}
